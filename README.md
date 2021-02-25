@@ -1,4 +1,4 @@
-# NAS_PerformanceEstimation
+# OFANAS_PerformanceEstimation
 Generalized Latency Performance Estimation for Once-For-All Neural Architecture Search
 
 This implementation is adopted from the source code of 
