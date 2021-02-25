@@ -1,0 +1,71 @@
+nte10_lookuptable_ofa.csv -> Time to Create Dataset of 10000 points: 1.4525880813598633
+note10_lookuptable_fixedkernelcompofa.csv -> Time to Create Dataset of 10000 points: 2.6386759281158447
+note10_lookuptable_elastickernelcompofa.csv -> Time to Create Dataset of 10000 points: 2.909356117248535
+
+RTX_2080_Ti_GPU_ofa.csv -> Time to Create Dataset of 10000 points: 3631.3157744407654 (10^19 unique child_archs, measures latency for each)
+RTX_2080_Ti_GPU_fixedkernelcompofa.csv -> Time to Create Dataset of 10000 points: 90.45288014411926 (243 unique child_archs, checks for previous)
+
+Intel_Xeon_CPU_fixedkernelcompofa.csv -> Time to Create Dataset of 10000 points: 3119.3101949691772
+
+Tesla_P40_GPU_fixedkernelcompofa.csv -> Time to Create Dataset of 10000 points: 192.91428780555725
+Tesla_P40_GPU_ofa.csv -> Time to Create Dataset of 10000 points: 8357.128091812134
+
+
+
+
+
+
+Inference Time Analysis:
+    Evaluated on Tesla P40 GPU:
+        RTX_ofa_model:        0.0005641210079193115  seconds
+        Latency Measurement:  1.1953039169311523     seconds
+        -
+        note10_ofa_model:     0.0005447936058044434  seconds
+        Latency Measurement:  1.1841907501220703     seconds
+
+    Evaluated on RTX 2080 Ti GPU:
+        RTX_ofa_model:        0.0002775578498840332  seconds
+        Latency Measurement:  0.6996810436248779     seconds
+        -
+        note10_ofa_model:     0.00027440810203552247 seconds
+        Latency Measurement:  0.7068202495574951     seconds
+
+    Evaluated on Intel Xeon CPU:
+        RTX_ofa_model:        0.006236276626586914   seconds
+        Latency Measurement:  6.807215690612793      seconds
+        -
+        note10_ofa_model:     0.005977521419525147   seconds
+        Latency Measurement:  6.682298421859741      seconds    
+
+
+NAS Time Analysis:
+    Evaluated on RTX 2080 Ti GPU:
+        RTX_ofa_model:                              145.70815420150757     seconds    
+            gpu constraint (15):                     40                    seconds
+            gpu constraint (20):                     35                    seconds
+            gpu constraint (25):                     34                    seconds
+            gpu constraint (30):                     34                    seconds
+        Latency Measurement:                        178.69760942459106     seconds
+            gpu constraint (15):                     46                    seconds
+            gpu constraint (20):                     25                    seconds
+            gpu constraint (25):                     21                    seconds
+            gpu constraint (30):                     20                    seconds
+        Note10 Lookup Table:                        76.01321506500244      seconds
+            gpu constraint (15):                     18                    seconds
+            gpu constraint (20):                     18                    seconds
+            gpu constraint (25):                     19                    seconds
+            gpu constraint (30):                     18                    seconds            
+
+
+    Evaluated on Tesla P40 GPU:
+        RTX_ofa_model:        2365.165474176407      seconds
+
+
+    Total ImageNet Evaluation and NAS Time for 10 hardware constraints:
+        note10_Latency_Estimation                   299.82893443107605     seconds       
+
+
+
+- include graph comparing previous estimation and latency model
+- Latency creation time vs model inference (Note10)
+- n kernel sizes -> n! * 3
