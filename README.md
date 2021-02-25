@@ -4,7 +4,7 @@ Generalized Latency Performance Estimation for Once-For-All Neural Architecture 
 This implementation is adopted from the source code of 
 [`Once For All (Cai et al. 2019)`](https://github.com/mit-han-lab/once-for-all) and [`CompOFA (Sahni et al. 2021)`](https://github.com/compofa-blind-review/compofa-iclr21)
 
-We created a jupyter_notebook: [latency_prediction_demo.ipynb](https://github.com/RhythmSyed/NAS_PerformanceEstimation/blob/main/tutorial/latency_prediction_demo.ipynb) which run through
+We created a jupyter_notebook: [latency_prediction_demo.ipynb](https://github.com/OFANAS/OFANAS_PerformanceEstimation/blob/main/tutorial/latency_prediction_demo.ipynb) which run through
 all the required steps to show a working version of the code base.
 
 
